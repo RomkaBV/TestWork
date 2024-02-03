@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/TestWork/static/css/main.f26b13ee.css",
+    "main.js": "/TestWork/static/js/main.56290fde.js",
+    "static/media/instagram.svg": "/TestWork/static/media/instagram.fdbcef89ba904ebc9de137d22fbe6031.svg",
+    "static/media/logoImg.svg": "/TestWork/static/media/logoImg.279dcd25ef0b4a97e851dd18c61a7b14.svg",
+    "static/media/email.svg": "/TestWork/static/media/email.ed8dc22f088ebd5adee13516f366eeef.svg",
+    "static/media/theme.svg": "/TestWork/static/media/theme.d6324e5f4dc869e4b1c029057be6fdd8.svg",
+    "static/media/android.svg": "/TestWork/static/media/android.e6a3ae777c9bfdb8e482cfb1db95e4c7.svg",
+    "static/media/apple.svg": "/TestWork/static/media/apple.8f7317a0b6f8284a35b3c307e4d9172c.svg",
+    "static/media/twitter.svg": "/TestWork/static/media/twitter.fbd8f3ad77605c798a548bd7cc64ebf1.svg",
+    "static/media/phone.svg": "/TestWork/static/media/phone.89333d0ae7637158e661f589af29654a.svg",
+    "index.html": "/TestWork/index.html",
+    "static/media/search.svg": "/TestWork/static/media/search.2be5b22ad72bd44071df890a73e20543.svg",
+    "static/media/youtube.svg": "/TestWork/static/media/youtube.6a9075383a4064df81f1ad9fdcef874b.svg",
+    "static/media/wifi.svg": "/TestWork/static/media/wifi.89b8c2e1048fcc4987e068b497a232e3.svg",
+    "static/media/network.svg": "/TestWork/static/media/network.2006dcdb0cba11537529e313f2e0d1b7.svg",
+    "static/media/facebook.svg": "/TestWork/static/media/facebook.a24ebb84236da408ce476f470a82bf02.svg",
+    "main.f26b13ee.css.map": "/TestWork/static/css/main.f26b13ee.css.map",
+    "main.56290fde.js.map": "/TestWork/static/js/main.56290fde.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f26b13ee.css",
+    "static/js/main.56290fde.js"
+  ]
+}
