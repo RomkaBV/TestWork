@@ -19,6 +19,11 @@ export default function Header() {
   const handleTemeButtonClick = () => {
     setState((prevState) => !prevState);
   };
+  const handleButtonSearch = (evt) => {
+    evt.preventDefault();
+
+    evt.target.reset();
+  };
   return (
     <header>
       <div className="header">
@@ -158,7 +163,7 @@ export default function Header() {
               </li>
             </ul>
 
-            <form className="nav__search search">
+            <form className="nav__search search" onSubmit={handleButtonSearch}>
               <label htmlFor="serch" className="search__label">
                 <input
                   id="search"
@@ -167,14 +172,14 @@ export default function Header() {
                   aria-label="Пошук на сайті"
                   className="search__input"
                 />
-                <button className="search__button">
-                  <img
-                    src={search}
-                    alt="Icon-search"
-                    className="search__icons"
-                  />
-                </button>
               </label>
+              <button className="search__button" type="submit">
+                <img
+                  src={search}
+                  alt="Button-Icon-search"
+                  className="search__icons"
+                />
+              </button>
             </form>
           </div>
         </nav>

@@ -101,9 +101,6 @@
     cursor: pointer;
   }
 
-  // &:active {
-  //   text-align: right;
-  // }
   &.is-open {
     text-align: right;
   }
@@ -116,15 +113,14 @@
 //*Botton header nav
 
 .nav {
-  width: 1170px;
   height: 110px;
-  display: grid;
-  grid-template-columns: min-content 1fr min-content;
-  column-gap: 61px;
+  display: flex;
+  align-items: center;
 
   &__logo {
     width: 134px;
-    height: 42px;
+    height: 18px;
+    margin-right: 61px;
   }
 
   &__site {
@@ -144,45 +140,29 @@
     font-weight: 500;
     font-size: 18px;
   }
-
-  &__label {
-  }
-
-  &__input {
-    margin-left: 21px;
-    font-weight: 400;
-    font-size: 16px;
-  }
-
-  &__icons {
-    width: 19px;
-    height: 20px;
-    vertical-align: baseline;
-    margin-right: 10px;
-  }
 }
 
 .search {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 175px;
-  height: 42px;
+  margin-left: auto;
   background-color: #eee;
   border-radius: 38px;
 
   &__label {
     display: flex;
-    justify-content: center;
-    align-items: center;
   }
   &__input {
+    margin: 11px auto 11px 21px;
+    color: #757575;
+    font-size: 16px;
   }
-  &__button {
+  &__button:active {
+    transform: scale(1.2);
   }
-
   &__icons {
-    vertical-align: baseline;
+    width: 19px;
+    height: 20px;
     margin-right: 10px;
   }
 }
