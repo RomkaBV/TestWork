@@ -1,0 +1,125 @@
+:root {
+  --var--color-text: rgba(255, 255, 255, 1);
+  --var--icon--color: rgba(13, 208, 186, 1);
+  --var--social--blok-color: rgba(13, 208, 186, 1);
+  --var--bloc--bg: rgba(255, 255, 255, 1);
+  --var--logo-color: url(#pattern0);
+}
+[dark] {
+  --var--logo-color: url(#image0_1_4482);
+  --var--icon--color: rgba(255, 255, 255, 1);
+  --var--bloc--bg: rgba(32, 36, 52, 1);
+  --var--social--blok-color: rgba(255, 255, 255, 1);
+}
+
+footer {
+  background: linear-gradient(
+    90deg,
+    rgba(13, 208, 186, 1) 35%,
+    rgba(42, 134, 229, 1) 100%
+  );
+  margin-bottom: 28px;
+}
+.test {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.sociall * {
+  fill: url(#image0_1_4482);
+}
+.sociall {
+  width: 351px;
+  height: 394px;
+  background-color: var(--var--bloc--bg);
+  border-radius: 20px;
+
+  &__blok {
+    width: 750px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__category {
+    margin-top: 95px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+  &__content {
+    font-weight: 400;
+    color: var(--var--color-text);
+    text-align: center;
+  }
+  &__content:last-child {
+    margin-right: 84px;
+    text-align: center;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+  }
+  &__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+  }
+  &__link {
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    &:hover {
+      box-shadow: 1px 1px 1px 1px var(--var--social--blok-color);
+      transform: scale(1.1);
+    }
+
+    &:active {
+      transform: scale(1.2);
+    }
+  }
+
+  &__img {
+    width: 200px;
+    height: 72px;
+    margin-top: 61px;
+    margin-left: 75px;
+    margin-bottom: 41px;
+  }
+
+  &__icons * {
+    fill: var(--var--icon--color);
+  }
+}
+
+.testa {
+  color: var(--var--color-text);
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 64px;
+}
+
+.title {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--var--social--blok-color);
+}
+
+.text {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 35px;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--var--social--blok-color);
+}

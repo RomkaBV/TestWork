@@ -1,0 +1,197 @@
+:root {
+  --var--color-body-main: rgba(112, 112, 112, 1);
+  --var--color-main-text: rgba(112, 112, 112, 1);
+  --var--similarArticle-block-text: rgba(179, 179, 177, 1);
+  --var--similarArticle-icon-color: rgba(179, 179, 177, 1);
+  --var--similarArticle-card-bg: rgba(255, 255, 255, 1);
+  --var--similarArticle-card-color: rgba(42, 134, 229, 1);
+  --var--title-color: linear-gradient(90deg, #0dd0ba 0%, #2a86e5 100%);
+  --var--right-blok-bg: linear-gradient(
+      to right,
+      rgba(252, 183, 56, 0.4),
+      rgba(239, 121, 60, 0.4)
+    ),
+    url("../icon/image22.svg");
+  --var--right-blok-border: linear-gradient(#fff324, #f73a38);
+  --var--right-blok-text: rgba(255, 255, 255, 1);
+}
+[dark] {
+  --var--color-main-text: rgba(255, 255, 255, 1);
+  --var--similarArticle-block-text: rgba(255, 255, 255, 1);
+  --var--similarArticle-icon-color: rgba(255, 255, 255, 1);
+  --var--similarArticle-card-bg: rgba(32, 36, 52, 1);
+}
+
+main {
+  margin-top: 46px;
+  margin-bottom: 130px;
+  color: var(--var--color-body-main);
+}
+
+.category {
+  display: flex;
+
+  &__item {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    &::after {
+      padding: 0 3px;
+      content: "\003E";
+    }
+
+    &:last-child {
+      &::after {
+        padding: 0px;
+        content: none;
+      }
+    }
+  }
+  &__link {
+    color: var(--var--color-body-main);
+  }
+
+  &__item span {
+    font-weight: 700;
+    color: var(--var--color-body-main);
+  }
+}
+.section {
+  display: flex;
+  justify-content: space-between;
+}
+.articles {
+  width: 810px;
+
+  &__subtitle {
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 37px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--var--color-main-text);
+    & span::before {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0px;
+      right: 0px;
+      height: 9px;
+      background: var(--var--title-color);
+      width: 44px;
+      border-radius: 20px;
+      z-index: -1;
+    }
+  }
+
+  &__title {
+    font-weight: 900;
+    font-size: 42px;
+    line-height: 54px;
+    background: var(--var--title-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__text {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    font-weight: 400;
+    size: 20px;
+    line-height: 32px;
+    color: var(--var--color-main-text);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  &__blok {
+    width: 387px;
+    border-radius: 20px;
+    background-color: var(--var--similarArticle-card-bg);
+  }
+}
+
+.blok {
+  &__title {
+    margin-top: 18px;
+    font-weight: 700;
+    size: 22px;
+    line-height: 26.4px;
+    color: var(--var--similarArticle-card-color);
+  }
+  &__image {
+    margin-top: 20px;
+  }
+  &__item {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__meta:first-child {
+    margin-right: 22px;
+  }
+  &__text {
+    margin-left: 5px;
+  }
+  &__icon * {
+    vertical-align: baseline;
+  }
+  &__icon * {
+    fill: var(--var--similarArticle-icon-color);
+  }
+  &__text {
+    color: var(--var--similarArticle-block-text);
+    size: 14px;
+    line-height: 14px;
+  }
+}
+
+.content__blok {
+  color: var(--var--color-main-text);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 300px;
+  height: 600px;
+  border-radius: 20px;
+  background: var(--var--right-blok-bg);
+
+  //   border: 3px solid transparent;
+  //   border-image: linear-gradient(#fff324, #f73a38);
+  //   border-image-slice: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    bottom: -3px;
+    right: -3px;
+    background: var(--var--right-blok-border);
+    border-radius: 20px;
+    z-index: -1;
+  }
+
+  &__title {
+    font-weight: 700px;
+    font-size: 60px;
+    line-height: 72px;
+  }
+
+  &__subtitle {
+    font-weight: 700px;
+    font-size: 40px;
+    line-height: 23px;
+  }
+}

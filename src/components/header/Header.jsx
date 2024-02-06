@@ -1,27 +1,23 @@
 import LogoImg from "../icon/logoImg.svg";
-import facebook from "../icon/facebook.svg";
-import twitter from "../icon/twitter.svg";
-import instagram from "../icon/instagram.svg";
-import youtube from "../icon/youtube.svg";
-import email from "../icon/email.svg";
-import wifi from "../icon/wifi.svg";
+import LogoImgdark from "../icon/logoImgdark.svg";
+import { ReactComponent as Facebook } from "../icon/facebook.svg";
+import { ReactComponent as Twitter } from "../icon/twitter.svg";
+import { ReactComponent as Instagram } from "../icon/instagram.svg";
+import { ReactComponent as Youtube } from "../icon/youtube.svg";
+import { ReactComponent as Email } from "../icon/email.svg";
+import { ReactComponent as Wifi } from "../icon/wifi.svg";
 import theme from "../icon/theme.svg";
+import themedark from "../icon/themedark.svg";
 import phone from "../icon/phone.svg";
 import network from "../icon/network.svg";
 import android from "../icon/android.svg";
 import apple from "../icon/apple.svg";
 import search from "../icon/search.svg";
 import "./header.scss";
-import { useState } from "react";
 
-export default function Header() {
-  const [state, setState] = useState(false);
-  const handleTemeButtonClick = () => {
-    setState((prevState) => !prevState);
-  };
+export default function Header({ handleTemeButtonClick, state }) {
   const handleButtonSearch = (evt) => {
     evt.preventDefault();
-
     evt.target.reset();
   };
   return (
@@ -50,7 +46,7 @@ export default function Header() {
                 <a href="#" className="header__link">
                   <img
                     src={android}
-                    alt="Icon-android"
+                    alt="Icon android"
                     className="header__icon"
                   />
                 </a>
@@ -59,7 +55,7 @@ export default function Header() {
               </li>
               <li className="header__item">
                 <a href="#" className="header__link">
-                  <img src={apple} alt="Icon-apple" className="header__icon" />
+                  <img src={apple} alt="Icon apple" className="header__icon" />
                 </a>
                 <span className="header__text">Menu item 4</span>
               </li>
@@ -68,48 +64,48 @@ export default function Header() {
             <ul className="social">
               <li className="social__items">
                 <a href="#" className="social__link">
-                  <img src={facebook} alt="Facebook" className="social__icon" />
+                  <Facebook alt="Facebook" className="social__icon" />
                 </a>
               </li>
               <li className="social__items">
                 <a href="#" className="social__link">
-                  <img src={twitter} alt="Twitter" className="social__icon" />
+                  <Twitter alt="Twitter" className="social__icon" />
                 </a>
               </li>
               <li className="social__items">
                 <a href="#" className="social__link">
-                  <img
-                    src={instagram}
-                    alt="Instagram"
-                    className="social__icon"
-                  />
+                  <Instagram alt="Instagram" className="social__icon" />
                 </a>
               </li>
               <li className="social__items">
                 <a href="#" className="social__link">
-                  <img src={youtube} alt="YouTube" className="social__icon" />
+                  <Youtube alt="YouTube" className="social__icon" />
                 </a>
               </li>
               <li className="social__items">
                 <a href="#" className="social__link">
-                  <img src={email} alt="Email" className="social__icon" />
+                  <Email alt="Email" className="social__icon" />
                 </a>
               </li>
               <li className="social__items">
                 <a href="#" className="social__link">
-                  <img src={wifi} alt="Wifi" className="social__icon" />
+                  <Wifi alt="Wifi" className="social__icon" />
                 </a>
               </li>
               <button
                 className={state ? "button__theme" : "button__theme is-open"}
                 onClick={handleTemeButtonClick}
               >
-                <img
-                  src={theme}
-                  alt="Button-Theme"
-                  arial-label="Перемикач теми"
-                  className="button__icon"
-                />
+                <div
+                  className={state ? "button__blok" : "button__blok is-open"}
+                >
+                  <img
+                    src={state ? theme : themedark}
+                    alt="Button-Theme"
+                    arial-label="Перемикач теми"
+                    className="button__icon"
+                  />
+                </div>
               </button>
             </ul>
           </div>
@@ -121,7 +117,11 @@ export default function Header() {
           <div className="header__nav nav">
             <div className="nav__logo">
               <a className="nav__link" href="./index.html">
-                <img src={LogoImg} alt="Logo-Images" className="nav__icon" />
+                <img
+                  src={state ? LogoImg : LogoImgdark}
+                  alt="Logo-Images"
+                  className="nav__icon"
+                />
               </a>
             </div>
 
@@ -172,14 +172,15 @@ export default function Header() {
                   aria-label="Пошук на сайті"
                   className="search__input"
                 />
+
+                <button className="search__button" type="submit">
+                  <img
+                    src={search}
+                    alt="Button-Icon-search"
+                    className="search__icons"
+                  />
+                </button>
               </label>
-              <button className="search__button" type="submit">
-                <img
-                  src={search}
-                  alt="Button-Icon-search"
-                  className="search__icons"
-                />
-              </button>
             </form>
           </div>
         </nav>
