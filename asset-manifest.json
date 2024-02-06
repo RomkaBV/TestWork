@@ -1,26 +1,41 @@
 {
   "files": {
-    "main.css": "/TestWork/static/css/main.f4f6233d.css",
-    "main.js": "/TestWork/static/js/main.0ecef843.js",
+    "main.css": "/TestWork/static/css/main.0d64abfe.css",
+    "main.js": "/TestWork/static/js/main.ca830be6.js",
+    "static/media/image22.svg": "/TestWork/static/media/image22.e791c25a24c9f49aaabc773c621b6824.svg",
+    "static/media/image10.png": "/TestWork/static/media/image10.a0b9e798b498a52510d1.png",
+    "static/media/imagemain.png": "/TestWork/static/media/imagemain.fff00dac815c45c032ab.png",
+    "static/media/goddess-of-victory-nikke-icon-120x120.jpg.png": "/TestWork/static/media/goddess-of-victory-nikke-icon-120x120.jpg.9906e295a1327229e2bc.png",
     "static/media/instagram.svg": "/TestWork/static/media/instagram.fdbcef89ba904ebc9de137d22fbe6031.svg",
+    "static/media/finstagram.svg": "/TestWork/static/media/finstagram.01087e405aae573fa27abc8914436fed.svg",
+    "static/media/logoImgdark.svg": "/TestWork/static/media/logoImgdark.3f546dcfb4302647e895cd14b5839b4c.svg",
     "static/media/logoImg.svg": "/TestWork/static/media/logoImg.279dcd25ef0b4a97e851dd18c61a7b14.svg",
     "static/media/email.svg": "/TestWork/static/media/email.ed8dc22f088ebd5adee13516f366eeef.svg",
+    "static/media/femail.svg": "/TestWork/static/media/femail.2a2fbfa03d5a5751794255deac553d7b.svg",
     "static/media/theme.svg": "/TestWork/static/media/theme.d6324e5f4dc869e4b1c029057be6fdd8.svg",
+    "static/media/download.svg": "/TestWork/static/media/download.c0297db91b505878520839413b9c4021.svg",
     "static/media/android.svg": "/TestWork/static/media/android.e6a3ae777c9bfdb8e482cfb1db95e4c7.svg",
     "static/media/apple.svg": "/TestWork/static/media/apple.8f7317a0b6f8284a35b3c307e4d9172c.svg",
     "static/media/twitter.svg": "/TestWork/static/media/twitter.fbd8f3ad77605c798a548bd7cc64ebf1.svg",
+    "static/media/ftwitter.svg": "/TestWork/static/media/ftwitter.cd8cd86c51f0d75e30abe80d42d7cfff.svg",
+    "static/media/fyoutube.svg": "/TestWork/static/media/fyoutube.218e74206fae5e47ff0783b89e7bf4c9.svg",
     "static/media/phone.svg": "/TestWork/static/media/phone.89333d0ae7637158e661f589af29654a.svg",
     "index.html": "/TestWork/index.html",
+    "static/media/fwifi.svg": "/TestWork/static/media/fwifi.61d665fb749cf0079599902d52b43785.svg",
     "static/media/search.svg": "/TestWork/static/media/search.2be5b22ad72bd44071df890a73e20543.svg",
     "static/media/youtube.svg": "/TestWork/static/media/youtube.6a9075383a4064df81f1ad9fdcef874b.svg",
+    "static/media/themedark.svg": "/TestWork/static/media/themedark.342a17af620809d25eca22ec9b816742.svg",
     "static/media/wifi.svg": "/TestWork/static/media/wifi.89b8c2e1048fcc4987e068b497a232e3.svg",
+    "static/media/clock.svg": "/TestWork/static/media/clock.bb1e0d4b267c530310a651b6180745cd.svg",
+    "static/media/user.svg": "/TestWork/static/media/user.afff14a8ea4ff9305e092d0361293b75.svg",
     "static/media/network.svg": "/TestWork/static/media/network.2006dcdb0cba11537529e313f2e0d1b7.svg",
-    "static/media/facebook.svg": "/TestWork/static/media/facebook.a24ebb84236da408ce476f470a82bf02.svg",
-    "main.f4f6233d.css.map": "/TestWork/static/css/main.f4f6233d.css.map",
-    "main.0ecef843.js.map": "/TestWork/static/js/main.0ecef843.js.map"
+    "static/media/ffacebook.svg": "/TestWork/static/media/ffacebook.be82d540e3c2f1e6921cf949055f0d03.svg",
+    "static/media/facebook.svg": "/TestWork/static/media/facebook.ba37ab6ea9c2ee90f31810ed330d0d38.svg",
+    "main.0d64abfe.css.map": "/TestWork/static/css/main.0d64abfe.css.map",
+    "main.ca830be6.js.map": "/TestWork/static/js/main.ca830be6.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4f6233d.css",
-    "static/js/main.0ecef843.js"
+    "static/css/main.0d64abfe.css",
+    "static/js/main.ca830be6.js"
   ]
 }
