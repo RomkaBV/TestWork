@@ -333,6 +333,9 @@ $breakpoint_sm: 380px;
   &__link {
     color: var(--var-header-color-menuItem);
   }
+  &__text {
+    color: var(--var-header-color-menuItem);
+  }
   &__form {
     max-width: 730px;
     position: relative;
@@ -346,7 +349,7 @@ $breakpoint_sm: 380px;
   }
 
   &__input {
-    width: 100%;
+    width: 90%;
     padding: 10px 0px;
     margin-left: auto;
   }
@@ -380,7 +383,18 @@ $breakpoint_sm: 380px;
     font-size: 18px;
     color: var(--var-heder-modal--icon);
   }
+  &__icon {
+    margin-right: 15px;
+  }
   &__icons * {
     fill: var(--var-heder-modal--icon);
+  }
+}
+
+#deletemMenu {
+  @media screen and (min-width: $breakpoint_md) and (max-width: $breakpoint_xl) {
+    & {
+      display: none;
+    }
   }
 }

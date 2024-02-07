@@ -243,9 +243,9 @@ export default function Hero() {
           </div>
           <div className={hero ? 'tabModal' : 'tabModal is-open'}>
             <ul className="tabModal__list">
-              <li className="tabModal__item">
+              <li className="tabModal__item" id="test">
                 <button className="tabModal__button" href="">
-                  <span id="test">Lorem Ipsum is simply dummy</span>
+                  <span>Lorem Ipsum is simply dummy</span>
                 </button>
               </li>
               <li className="tabModal__item">

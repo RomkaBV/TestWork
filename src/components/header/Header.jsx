@@ -59,7 +59,7 @@ export default function Header({ handleTemeButtonClick, state }) {
 
                 <span className="header__text">Menu item 3</span>
               </li>
-              <li className="header__item">
+              <li className="header__item" id="deletemMenu">
                 <a href="#" className="header__link">
                   <Apple alt="Icon apple" className="header__icon" />
                 </a>
