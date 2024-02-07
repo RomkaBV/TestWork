@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/TestWork/static/css/main.0c0c3ee6.css",
-    "main.js": "/TestWork/static/js/main.526dbc29.js",
+    "main.css": "/TestWork/static/css/main.87ebb9f8.css",
+    "main.js": "/TestWork/static/js/main.587df14b.js",
     "static/media/image22.svg": "/TestWork/static/media/image22.e791c25a24c9f49aaabc773c621b6824.svg",
     "static/media/image10.png": "/TestWork/static/media/image10.a0b9e798b498a52510d1.png",
     "static/media/imagemain.png": "/TestWork/static/media/imagemain.fff00dac815c45c032ab.png",
@@ -33,11 +33,11 @@
     "static/media/network.svg": "/TestWork/static/media/network.2006dcdb0cba11537529e313f2e0d1b7.svg",
     "static/media/ffacebook.svg": "/TestWork/static/media/ffacebook.be82d540e3c2f1e6921cf949055f0d03.svg",
     "static/media/facebook.svg": "/TestWork/static/media/facebook.ba37ab6ea9c2ee90f31810ed330d0d38.svg",
-    "main.0c0c3ee6.css.map": "/TestWork/static/css/main.0c0c3ee6.css.map",
-    "main.526dbc29.js.map": "/TestWork/static/js/main.526dbc29.js.map"
+    "main.87ebb9f8.css.map": "/TestWork/static/css/main.87ebb9f8.css.map",
+    "main.587df14b.js.map": "/TestWork/static/js/main.587df14b.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c0c3ee6.css",
-    "static/js/main.526dbc29.js"
+    "static/css/main.87ebb9f8.css",
+    "static/js/main.587df14b.js"
   ]
 }
