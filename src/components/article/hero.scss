@@ -379,8 +379,9 @@ $breakpoint_sm: 380px;
     -webkit-text-fill-color: transparent;
 
     & span:hover::before,
-    span:active::before {
+    & span:active::before {
       content: '';
+
       position: absolute;
       bottom: -10px;
       left: 50%;
@@ -388,8 +389,11 @@ $breakpoint_sm: 380px;
       background: var(--var--title-color);
       width: 24px;
       border-radius: 40px;
-      z-index: -1;
+      z-index: 1;
       transform: translate(-50%, -50%);
+    }
+    &__button:hover {
+      transform: translate(1.1);
     }
   }
 }
@@ -400,6 +404,7 @@ $breakpoint_sm: 380px;
 #test {
   @media screen and (min-width: $breakpoint_md) and (max-width: $breakpoint_xl) {
     & {
+      display: none;
     }
   }
 }
