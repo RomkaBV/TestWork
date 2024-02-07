@@ -1,13 +1,13 @@
-import LogoImg from "../icon/logoImg.svg";
-import LogoImgdark from "../icon/logoImgdark.svg";
+import LogoImg from '../icon/logoImg.svg';
+import LogoImgdark from '../icon/logoImgdark.svg';
 
-import { ReactComponent as Facebook } from "../icon/ffacebook.svg";
-import { ReactComponent as Twitter } from "../icon/ftwitter.svg";
-import { ReactComponent as Instagram } from "../icon/finstagram.svg";
-import { ReactComponent as Youtube } from "../icon/fyoutube.svg";
-import { ReactComponent as Email } from "../icon/femail.svg";
-import { ReactComponent as Wifi } from "../icon/fwifi.svg";
-import "./footer.scss";
+import { ReactComponent as Facebook } from '../icon/ffacebook.svg';
+import { ReactComponent as Twitter } from '../icon/ftwitter.svg';
+import { ReactComponent as Instagram } from '../icon/finstagram.svg';
+import { ReactComponent as Youtube } from '../icon/fyoutube.svg';
+import { ReactComponent as Email } from '../icon/femail.svg';
+import { ReactComponent as Wifi } from '../icon/fwifi.svg';
+import './footer.scss';
 
 export default function Footer({ state }) {
   return (
@@ -85,12 +85,32 @@ export default function Footer({ state }) {
               </div>
               <div className="sociall__content">
                 <h2 className="sociall__title">Useful links</h2>
-                <ul>
-                  <li className="sociall__item">link</li>
-                  <li className="sociall__item">link</li>
-                  <li className="sociall__item">link</li>
-                  <li className="sociall__item">link</li>
-                  <li className="sociall__item">link</li>
+                <ul className="social__subtitle">
+                  <li className="sociall__items">
+                    <a className="social__links" href="#">
+                      link
+                    </a>
+                  </li>
+                  <li className="sociall__items">
+                    <a className="social__links" href="#">
+                      link
+                    </a>
+                  </li>
+                  <li className="sociall__items">
+                    <a className="social__links" href="#">
+                      link
+                    </a>
+                  </li>
+                  <li className="sociall__items">
+                    <a className="social__links" href="#">
+                      link
+                    </a>
+                  </li>
+                  <li className="sociall__items">
+                    <a className="social__links" href="#">
+                      link
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>

@@ -1,22 +1,23 @@
-import LogoImg from "../icon/logoImg.svg";
-import LogoImgdark from "../icon/logoImgdark.svg";
-import { ReactComponent as Facebook } from "../icon/facebook.svg";
-import { ReactComponent as Twitter } from "../icon/twitter.svg";
-import { ReactComponent as Instagram } from "../icon/instagram.svg";
-import { ReactComponent as Youtube } from "../icon/youtube.svg";
-import { ReactComponent as Email } from "../icon/email.svg";
-import { ReactComponent as Wifi } from "../icon/wifi.svg";
-import theme from "../icon/theme.svg";
-import themedark from "../icon/themedark.svg";
-import phone from "../icon/phone.svg";
-import network from "../icon/network.svg";
-import android from "../icon/android.svg";
-import apple from "../icon/apple.svg";
-import search from "../icon/search.svg";
-import "./header.scss";
+import LogoImg from '../icon/logoImg.svg';
+import LogoImgdark from '../icon/logoImgdark.svg';
+import { ReactComponent as Facebook } from '../icon/facebook.svg';
+import { ReactComponent as Twitter } from '../icon/twitter.svg';
+import { ReactComponent as Instagram } from '../icon/instagram.svg';
+import { ReactComponent as Youtube } from '../icon/youtube.svg';
+import { ReactComponent as Email } from '../icon/email.svg';
+import { ReactComponent as Wifi } from '../icon/wifi.svg';
+import { ReactComponent as Burgericon } from '../icon/burger.svg';
+import theme from '../icon/theme.svg';
+import themedark from '../icon/themedark.svg';
+import phone from '../icon/phone.svg';
+import network from '../icon/network.svg';
+import android from '../icon/android.svg';
+import apple from '../icon/apple.svg';
+import search from '../icon/search.svg';
+import './header.scss';
 
 export default function Header({ handleTemeButtonClick, state }) {
-  const handleButtonSearch = (evt) => {
+  const handleButtonSearch = evt => {
     evt.preventDefault();
     evt.target.reset();
   };
@@ -93,11 +94,11 @@ export default function Header({ handleTemeButtonClick, state }) {
                 </a>
               </li>
               <button
-                className={state ? "button__theme" : "button__theme is-open"}
+                className={state ? 'button__theme' : 'button__theme is-open'}
                 onClick={handleTemeButtonClick}
               >
                 <div
-                  className={state ? "button__blok" : "button__blok is-open"}
+                  className={state ? 'button__blok' : 'button__blok is-open'}
                 >
                   <img
                     src={state ? theme : themedark}
@@ -182,6 +183,10 @@ export default function Header({ handleTemeButtonClick, state }) {
                 </button>
               </label>
             </form>
+
+            <bottom className="modalHeaderButton">
+              <Burgericon className="modalHeaderButton__icon" />
+            </bottom>
           </div>
         </nav>
       </div>

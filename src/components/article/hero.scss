@@ -1,3 +1,7 @@
+$breakpoint_xl: 1170px;
+$breakpoint_md: 767px;
+$breakpoint_sm: 380px;
+
 :root {
   --var--white-color: rgba(255, 255, 255, 1);
   --var-img-hero: rgba(42, 134, 229, 0.07);
@@ -7,7 +11,7 @@
       rgba(22, 28, 58, 0.8),
       rgba(22, 28, 58, 0.8)
     ),
-    url("../icon/image10.png");
+    url('../icon/image10.png');
   --var--bg-download-botton: linear-gradient(90deg, #0dd0ba 0%, #2a86e5 100%);
   --var--color-Yourating: rgba(249, 185, 54, 1);
   --var--bg-Yourating: rgb(0, 0, 0);
@@ -19,38 +23,94 @@
   --var--hero-color-item: rgba(112, 112, 112, 1);
   --var--hero-bg-rating: rgba(235, 246, 245, 1);
   --var--hero-border-rating: rgba(112, 112, 112, 0.15);
+  --var--hero--modalBotton: rgba(112, 112, 112, 1);
 }
 
 [dark] {
   --var--hero-color-item: rgba(112, 112, 112, 1);
   --var--hero-bg: rgba(14, 18, 25, 1);
   --var--hero-bg-rating: rgba(24, 58, 93, 1);
+  --var--hero--modalBotton: rgba(255, 255, 255, 1);
 }
 
 .conteiner__article {
   height: 234px;
   background-color: var(--var--hero-bg);
   border-radius: 40px;
+  @media screen and (min-width: $breakpoint_md) and (max-width: $breakpoint_xl) {
+    & {
+      width: 720px;
+      position: relative;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+  @media screen and (min-width: $breakpoint_sm) and (max-width: $breakpoint_md) {
+    & {
+      width: 350px;
+      position: relative;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
 }
 
 .hero {
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
+  gap: 10px;
   align-items: center;
   height: 184px;
   background: var(--var--bg-hero-img);
   border-radius: 30px;
+  @media screen and (min-width: $breakpoint_md) and (max-width: $breakpoint_xl) {
+    & {
+      justify-content: center;
+    }
+  }
 }
 
 .download {
   display: flex;
+  flex-wrap: nowrap;
   justify-content: space-between;
+  align-items: center;
   margin-left: 56px;
   color: var(--var--white-color);
+  @media screen and (min-width: $breakpoint_md) and (max-width: $breakpoint_xl) {
+    & {
+      margin-left: 0px;
+    }
+  }
+  @media screen and (min-width: $breakpoint_sm) and (max-width: $breakpoint_md) {
+    & {
+      margin-left: 20px;
+    }
+  }
+  &__blok {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    gap: 5px;
+    @media screen and (min-width: 0px) and (max-width: $breakpoint_xl) {
+      & {
+        display: none;
+      }
+    }
+  }
 
   &__icon {
     max-width: 120px;
     max-height: 120px;
+    @media screen and (min-width: $breakpoint_sm) and (max-width: $breakpoint_md) {
+      & {
+        max-width: 89px;
+        max-height: 89px;
+      }
+    }
   }
 
   &__conteiner {
@@ -59,14 +119,30 @@
     margin-left: 24px;
   }
   &__title {
+    text-align: left;
+
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
     margin-bottom: 10px;
+    @media screen and (min-width: $breakpoint_md) and (max-width: $breakpoint_xl) {
+      & {
+        font-size: 35px;
+      }
+    }
+    @media screen and (min-width: $breakpoint_sm) and (max-width: $breakpoint_md) {
+      & {
+        font-size: 24px;
+      }
+    }
   }
+
   &__button {
-    font-weight: 400px;
-    size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
     line-height: 18px;
     border: 1px solid var(--var--white-color);
     margin-right: 8px;
@@ -77,20 +153,37 @@
       margin-right: 0px;
       background: var(--var--bg-download-botton);
     }
+    &:active {
+      transform: scale(1.05);
+    }
+    &:hover {
+      box-shadow: 0px 1px 1px 1px white;
+    }
   }
 }
 .progresBar {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   width: 217px;
   height: 85px;
   color: var(--var--white-color);
   margin-right: 59px;
-
+  @media screen and (min-width: 0px) and (max-width: $breakpoint_xl) {
+    & {
+      display: none;
+    }
+  }
   &__icon {
-    max-width: 120px;
-    max-height: 120px;
+    width: 120px;
+    height: 120px;
+    @media screen and (min-width: $breakpoint_sm) and (max-width: $breakpoint_md) {
+      & {
+        width: 89px;
+        height: 89px;
+      }
+    }
   }
   &__circular {
     position: relative;
@@ -119,13 +212,13 @@
 }
 .gradientBG {
   position: absolute;
-  width: 71px;
-  height: 71px;
+  width: 70px;
+  height: 70px;
   background-color: var(--var--bg-Yourating);
   border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 51%;
+  left: 49%;
+  transform: translate(-50%, -51%);
   z-index: -1;
 }
 form {
@@ -136,6 +229,11 @@ form {
   width: 269px;
   height: 35px;
   margin-right: 33px;
+  @media screen and (min-width: 0px) and (max-width: $breakpoint_xl) {
+    & {
+      display: none;
+    }
+  }
 
   &__rating {
     position: relative;
@@ -179,8 +277,8 @@ form {
       padding-right: 11px;
     }
 
-    & input[type="radio"]:hover ~ label,
-    input[type="radio"]:checked ~ label {
+    & input[type='radio']:hover ~ label,
+    input[type='radio']:checked ~ label {
       background: transparent;
       border: 1px solid transparent;
       border-right: 1px solid var(--var--white-color);
@@ -197,6 +295,12 @@ form {
 .bottom__progres {
   display: flex;
   justify-content: space-between;
+  @media screen and (min-width: $breakpoint_sm) and (max-width: $breakpoint_xl) {
+    & {
+      justify-content: center;
+      margin-top: 10px;
+    }
+  }
 }
 .banner {
   margin-top: 12px;
@@ -205,6 +309,11 @@ form {
   font-size: 16px;
   line-height: 26px;
   display: flex;
+  @media screen and (min-width: 0px) and (max-width: $breakpoint_xl) {
+    & {
+      display: none;
+    }
+  }
 
   &__item {
     margin-right: 19px;
@@ -218,5 +327,32 @@ form {
   }
   &__link {
     color: var(--var--hero-color-item);
+  }
+}
+
+.modalBottomHero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26.5px;
+  color: rgba(112, 112, 112, 1);
+  &:active {
+    transform: scale(1.1);
+  }
+  @media screen and (min-width: $breakpoint_xl) {
+    & {
+      display: none;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+  }
+  &__icon * {
+    fill: var(--var--hero--modalBotton);
   }
 }

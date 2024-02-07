@@ -1,12 +1,14 @@
+$breakpoint_xl: 1170px;
+$breakpoint_md: 767px;
+$breakpoint_sm: 380px;
+
 :root {
   --var--color-text: rgba(255, 255, 255, 1);
   --var--icon--color: rgba(13, 208, 186, 1);
   --var--social--blok-color: rgba(13, 208, 186, 1);
   --var--bloc--bg: rgba(255, 255, 255, 1);
-  --var--logo-color: url(#pattern0);
 }
 [dark] {
-  --var--logo-color: url(#image0_1_4482);
   --var--icon--color: rgba(255, 255, 255, 1);
   --var--bloc--bg: rgba(32, 36, 52, 1);
   --var--social--blok-color: rgba(255, 255, 255, 1);
@@ -19,55 +21,146 @@ footer {
     rgba(42, 134, 229, 1) 100%
   );
   margin-bottom: 28px;
+  @media screen and (min-width: $breakpoint_sm) and (max-width: $breakpoint_md) {
+    & {
+      background: rgba(244, 240, 240, 1);
+    }
+  }
 }
 .test {
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 20px;
+  @media screen and (min-width: $breakpoint_md) and (max-width: $breakpoint_xl) {
+    & {
+      flex-direction: column;
+    }
+  }
+  @media screen and (min-width: $breakpoint_sm) and (max-width: $breakpoint_md) {
+    & {
+      width: 370px;
+      display: block;
+      background: linear-gradient(90deg, #0dd0ba 0%, #2a86e5 100%);
+      border-radius: 40px;
+      position: relative;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
 }
-.sociall * {
-  fill: url(#image0_1_4482);
-}
+
 .sociall {
   width: 351px;
   height: 394px;
   background-color: var(--var--bloc--bg);
   border-radius: 20px;
 
+  @media screen and (min-width: $breakpoint_md) and (max-width: $breakpoint_xl) {
+    & {
+      width: 668px;
+      height: 309px;
+      text-align: center;
+      position: relative;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+  @media screen and (min-width: $breakpoint_sm) and (max-width: $breakpoint_md) {
+    & {
+      width: 310px;
+      position: relative;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+  }
+
   &__blok {
     width: 750px;
-
     display: flex;
     flex-direction: column;
+    @media screen and (min-width: $breakpoint_md) and (max-width: $breakpoint_xl) {
+      & {
+        width: 668px;
+        height: 309px;
+        justify-content: space-evenly;
+        position: relative;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+    }
+    @media screen and (min-width: $breakpoint_sm) and (max-width: $breakpoint_md) {
+      & {
+        width: 300px;
+        position: relative;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        margin-top: 23px;
+      }
+    }
   }
 
   &__category {
     margin-top: 95px;
-
     display: flex;
     justify-content: space-between;
+    @media screen and (min-width: $breakpoint_sm) and (max-width: $breakpoint_md) {
+      & {
+        display: block;
+        position: relative;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+    }
+    @media screen and (min-width: $breakpoint_md) and (max-width: $breakpoint_xl) {
+      & {
+        width: 668px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+    }
   }
+
   &__content {
     font-weight: 400;
     color: var(--var--color-text);
     text-align: center;
+
+    @media screen and (min-width: $breakpoint_sm) and (max-width: $breakpoint_md) {
+      & {
+        margin-top: 12px;
+      }
+    }
   }
   &__content:last-child {
     margin-right: 84px;
     text-align: center;
+    @media screen and (min-width: $breakpoint_sm) and (max-width: $breakpoint_xl) {
+      & {
+        margin-right: 0px;
+      }
+    }
   }
   &__title {
     font-weight: 700;
     font-size: 24px;
     line-height: 31px;
+    margin-bottom: 12px;
   }
-  &__items {
+
+  &__item {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 6px;
   }
+
   &__link {
     width: 37px;
     height: 37px;
@@ -91,6 +184,18 @@ footer {
     margin-top: 61px;
     margin-left: 75px;
     margin-bottom: 41px;
+    @media screen and (min-width: $breakpoint_md) and (max-width: $breakpoint_xl) {
+      & {
+        margin-top: 34px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+      }
+    }
+    @media screen and (min-width: $breakpoint_sm) and (max-width: $breakpoint_md) {
+      & {
+        margin: 41px 61px;
+      }
+    }
   }
 
   &__icons * {
@@ -103,6 +208,12 @@ footer {
   font-style: italic;
   font-weight: 400;
   margin-top: 64px;
+  @media screen and (min-width: $breakpoint_md) and (max-width: $breakpoint_xl) {
+    & {
+      margin-top: 30px;
+      text-align: center;
+    }
+  }
 }
 
 .title {
@@ -122,4 +233,8 @@ footer {
   font-size: 16px;
   line-height: 23px;
   color: var(--var--social--blok-color);
+}
+
+.social__links {
+  color: white;
 }

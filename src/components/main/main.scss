@@ -1,3 +1,7 @@
+$breakpoint_xl: 1170px;
+$breakpoint_md: 767px;
+$breakpoint_sm: 380px;
+
 :root {
   --var--color-body-main: rgba(112, 112, 112, 1);
   --var--color-main-text: rgba(112, 112, 112, 1);
@@ -11,7 +15,7 @@
       rgba(252, 183, 56, 0.4),
       rgba(239, 121, 60, 0.4)
     ),
-    url("../icon/image22.svg");
+    url('../icon/image22.svg');
   --var--right-blok-border: linear-gradient(#fff324, #f73a38);
   --var--right-blok-text: rgba(255, 255, 255, 1);
 }
@@ -38,7 +42,7 @@ main {
 
     &::after {
       padding: 0 3px;
-      content: "\003E";
+      content: '\003E';
     }
 
     &:last-child {
@@ -49,11 +53,16 @@ main {
     }
   }
   &__link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
     color: var(--var--color-body-main);
   }
 
   &__item span {
     font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
     color: var(--var--color-body-main);
   }
 }
@@ -63,7 +72,24 @@ main {
 }
 .articles {
   width: 810px;
-
+  @media screen and (min-width: $breakpoint_md) and (max-width: $breakpoint_xl) {
+    & {
+      position: relative;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      max-width: 720px;
+    }
+  }
+  @media screen and (min-width: $breakpoint_sm) and (max-width: $breakpoint_md) {
+    & {
+      position: relative;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      max-width: 350px;
+    }
+  }
   &__subtitle {
     position: relative;
     margin-left: 10px;
@@ -73,7 +99,7 @@ main {
     line-height: 26px;
     color: var(--var--color-main-text);
     & span::before {
-      content: "";
+      content: '';
       position: absolute;
       bottom: -10px;
       left: 0px;
@@ -109,12 +135,21 @@ main {
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 15px;
   }
   &__blok {
     width: 387px;
     border-radius: 20px;
     background-color: var(--var--similarArticle-card-bg);
+    @media screen and (min-width: $breakpoint_sm) and (max-width: $breakpoint_xl) {
+      & {
+        position: relative;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        max-width: 350px;
+      }
+    }
   }
 }
 
@@ -167,12 +202,17 @@ main {
   border-radius: 20px;
   background: var(--var--right-blok-bg);
 
+  @media screen and (min-width: 0px) and (max-width: $breakpoint_xl) {
+    & {
+      display: none;
+    }
+  }
   //   border: 3px solid transparent;
   //   border-image: linear-gradient(#fff324, #f73a38);
   //   border-image-slice: 1;
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: -3px;
     left: -3px;
@@ -184,13 +224,13 @@ main {
   }
 
   &__title {
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 60px;
     line-height: 72px;
   }
 
   &__subtitle {
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 40px;
     line-height: 23px;
   }

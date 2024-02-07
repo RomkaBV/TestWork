@@ -1,20 +1,21 @@
-import { useState } from "react";
-import { CircularProgressbar } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
-import GradientSVG from "./gradientSVG";
-import victoryNikkeIcon from "../icon/goddess-of-victory-nikke-icon-120x120.jpg.png";
-import android from "../icon/android.svg";
-import apple from "../icon/apple.svg";
-import download from "../icon/download.svg";
-import "./hero.scss";
+import { useState } from 'react';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import GradientSVG from './gradientSVG';
+import victoryNikkeIcon from '../icon/goddess-of-victory-nikke-icon-120x120.jpg.png';
+import { ReactComponent as Burgericon } from '../icon/burger.svg';
+import android from '../icon/android.svg';
+import apple from '../icon/apple.svg';
+import download from '../icon/download.svg';
+import './hero.scss';
 
 export default function Hero() {
   const [state, setstate] = useState(5.2);
-  const handlChangeRate = (evt) => {
+  const handlChangeRate = evt => {
     setstate(evt);
   };
 
-  const idCSS = "hello";
+  const idCSS = 'hello';
   const percentage = state;
   return (
     <article>
@@ -24,31 +25,37 @@ export default function Hero() {
             <section className="download">
               <img src={victoryNikkeIcon} className="download__icon" />
               <div className="download__conteiner">
-                <h1 className="download__title">Lorem Ipsum is simply dummy</h1>
-                <button className="download__button">
-                  <img
-                    src={android}
-                    alt="Button Icon android"
-                    className="search__icons"
-                  />
-                  Android
-                </button>
-                <button className="download__button">
-                  <img
-                    src={apple}
-                    alt="Button Icon apple"
-                    className="search__icons"
-                  />
-                  iOS
-                </button>
-                <button className="download__button ">
-                  <img
-                    src={download}
-                    alt="Button Icon download"
-                    className="search__icons"
-                  />
-                  Download on PC
-                </button>
+                <div className="download__title">
+                  <h1 className="download__subtitle">
+                    Lorem Ipsum is simply dummy
+                  </h1>
+                  <div className="download__blok">
+                    <button className="download__button">
+                      <img
+                        src={android}
+                        alt="Button Icon android"
+                        className="search__icons"
+                      />
+                      Android
+                    </button>
+                    <button className="download__button">
+                      <img
+                        src={apple}
+                        alt="Button Icon apple"
+                        className="search__icons"
+                      />
+                      iOS
+                    </button>
+                    <button className="download__button ">
+                      <img
+                        src={download}
+                        alt="Button Icon download"
+                        className="search__icons"
+                      />
+                      Download on PC
+                    </button>
+                  </div>
+                </div>
               </div>
             </section>
 
@@ -63,19 +70,19 @@ export default function Hero() {
                   maxValue={10}
                   text={percentage}
                   styles={{
-                    path: { stroke: `url(#${idCSS})`, height: "100%" },
+                    path: { stroke: `url(#${idCSS})`, height: '100%' },
                     trail: {
-                      stroke: "rgb(0,0,0,40%)",
+                      stroke: 'rgb(0,0,0,40%)',
                     },
                     text: {
                       // Text color
-                      fill: "#fff",
+                      fill: '#fff',
                       // Text size
-                      fontSize: "30px",
+                      fontSize: '30px',
                       fontWeight: 900,
                     },
                     background: {
-                      fill: "#000",
+                      fill: '#000',
                     },
                   }}
                 />
@@ -129,7 +136,7 @@ export default function Hero() {
                   name="rating"
                   value={10}
                   id="rate10"
-                  onChange={(evt) => handlChangeRate(evt.currentTarget.value)}
+                  onChange={evt => handlChangeRate(evt.currentTarget.value)}
                 />
                 <label className="rate10" htmlFor="rate10">
                   10
@@ -139,7 +146,7 @@ export default function Hero() {
                   name="rating"
                   value={9}
                   id="rate9"
-                  onChange={(evt) => handlChangeRate(evt.currentTarget.value)}
+                  onChange={evt => handlChangeRate(evt.currentTarget.value)}
                 />
                 <label htmlFor="rate9">9</label>
                 <input
@@ -147,7 +154,7 @@ export default function Hero() {
                   name="rating"
                   value={8}
                   id="rate8"
-                  onChange={(evt) => handlChangeRate(evt.currentTarget.value)}
+                  onChange={evt => handlChangeRate(evt.currentTarget.value)}
                 />
                 <label htmlFor="rate8">8</label>
                 <input
@@ -155,7 +162,7 @@ export default function Hero() {
                   name="rating"
                   value={7}
                   id="rate7"
-                  onChange={(evt) => handlChangeRate(evt.currentTarget.value)}
+                  onChange={evt => handlChangeRate(evt.currentTarget.value)}
                 />
                 <label htmlFor="rate7">7</label>
                 <input
@@ -163,7 +170,7 @@ export default function Hero() {
                   name="rating"
                   value={6}
                   id="rate6"
-                  onChange={(evt) => handlChangeRate(evt.currentTarget.value)}
+                  onChange={evt => handlChangeRate(evt.currentTarget.value)}
                 />
                 <label htmlFor="rate6">6</label>
                 <input
@@ -171,7 +178,7 @@ export default function Hero() {
                   name="rating"
                   id="rate5"
                   value={5}
-                  onChange={(evt) => handlChangeRate(evt.currentTarget.value)}
+                  onChange={evt => handlChangeRate(evt.currentTarget.value)}
                 />
                 <label htmlFor="rate5">5</label>
                 <input
@@ -179,7 +186,7 @@ export default function Hero() {
                   name="rating"
                   id="rate4"
                   value={4}
-                  onChange={(evt) => handlChangeRate(evt.currentTarget.value)}
+                  onChange={evt => handlChangeRate(evt.currentTarget.value)}
                 />
                 <label htmlFor="rate4">4</label>
                 <input
@@ -187,7 +194,7 @@ export default function Hero() {
                   name="rating"
                   id="rate3"
                   value={3}
-                  onChange={(evt) => handlChangeRate(evt.currentTarget.value)}
+                  onChange={evt => handlChangeRate(evt.currentTarget.value)}
                 />
                 <label htmlFor="rate3">3</label>
                 <input
@@ -195,7 +202,7 @@ export default function Hero() {
                   name="rating"
                   id="rate2"
                   value={2}
-                  onChange={(evt) => handlChangeRate(evt.currentTarget.value)}
+                  onChange={evt => handlChangeRate(evt.currentTarget.value)}
                 />
                 <label htmlFor="rate2">2</label>
                 <input
@@ -203,7 +210,7 @@ export default function Hero() {
                   name="rating"
                   id="rate1"
                   value={1}
-                  onChange={(evt) => handlChangeRate(evt.currentTarget.value)}
+                  onChange={evt => handlChangeRate(evt.currentTarget.value)}
                 />
                 <label htmlFor="rate1">1</label>
                 <input
@@ -211,11 +218,15 @@ export default function Hero() {
                   name="rating"
                   id="rate"
                   value={0}
-                  onChange={(evt) => handlChangeRate(evt.currentTarget.value)}
+                  onChange={evt => handlChangeRate(evt.currentTarget.value)}
                 />
                 <label htmlFor="rate">Note</label>
               </div>
             </div>
+            <bottom className="modalBottomHero">
+              More info
+              <Burgericon className="modalBottomHero__icon" />
+            </bottom>
           </div>
         </div>
       </div>
