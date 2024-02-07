@@ -194,108 +194,98 @@ export default function Header({ handleTemeButtonClick, state }) {
               className="modalHeaderButton"
               onClick={handleButtomModal}
             >
-              {header && (
-                <Modal>
-                  <div className="modal">
-                    <form className="modal__form" onSubmit={handleButtonSearch}>
-                      <label htmlFor="serch" className="modal__label">
-                        <input
-                          id="search"
-                          type="text"
-                          placeholder="Search for…"
-                          aria-label="Пошук на сайті"
-                          className="modal__input"
-                        />
-
-                        <button className="modal__button" type="submit">
-                          <img
-                            src={search}
-                            alt="Button-Icon-search"
-                            className="modal__icon"
-                          />
-                        </button>
-                      </label>
-                    </form>
-                    <ul className="modal__site">
-                      <li className="modal__items">
-                        <a href="#" className="modal__link">
-                          Item
-                        </a>
-                      </li>
-                      <li className="modal__items">
-                        <a href="#" className="modal__link">
-                          Item
-                        </a>
-                      </li>
-                      <li className="modal__items">
-                        <a href="#" className="modal__link">
-                          Item
-                        </a>
-                      </li>
-                      <li className="modal__items">
-                        <a href="#" className="modal__link">
-                          Item
-                        </a>
-                      </li>
-                      <li className="modal__items">
-                        <a href="#" className="modal__link">
-                          Item
-                        </a>
-                      </li>
-                      <li className="modal__items">
-                        <a href="#" className="modal__link">
-                          Item
-                        </a>
-                      </li>
-                      <li className="modal__items">
-                        <a href="#" className="modal__link">
-                          Item
-                        </a>
-                      </li>
-                    </ul>
-
-                    <ul className="modal__list">
-                      <li className="modal__item">
-                        <a href="#" className="modal__links">
-                          <Phone alt="Icon-phone" className="modal__icons" />
-                        </a>
-                        <span className="modal__text">Menu item 1</span>
-                      </li>
-                      <li className="modal__item">
-                        <a href="#" className="modal__links">
-                          <Network
-                            alt="Icon-network"
-                            className="modal__icons"
-                          />
-                        </a>
-                        <span className="modal__text">Menu item 2</span>
-                      </li>
-                      <li className="modal__item">
-                        <a href="#" className="modal__links">
-                          <Android
-                            alt="Icon android"
-                            className="modal__icons"
-                          />
-                        </a>
-
-                        <span className="modal__text">Menu item 3</span>
-                      </li>
-                      <li className="modal__item">
-                        <a href="#" className="modal__links">
-                          <Apple alt="Icon apple" className="modal__icons" />
-                        </a>
-                        <span className="modal__text">Menu item 4</span>
-                      </li>
-                    </ul>
-                  </div>
-                </Modal>
-              )}
               {header ? (
                 <ModalClose className="modalHeaderButton__icon" />
               ) : (
                 <Burgericon className="modalHeaderButton__icon" />
               )}
             </bottom>
+          </div>
+          <div className={header ? 'modal' : 'modal is-open'}>
+            <form className="modal__form" onSubmit={handleButtonSearch}>
+              <label htmlFor="serch" className="modal__label">
+                <input
+                  id="search"
+                  type="text"
+                  placeholder="Search for…"
+                  aria-label="Пошук на сайті"
+                  className="modal__input"
+                />
+
+                <button className="modal__button" type="submit">
+                  <img
+                    src={search}
+                    alt="Button-Icon-search"
+                    className="modal__icon"
+                  />
+                </button>
+              </label>
+            </form>
+            <ul className="modal__site">
+              <li className="modal__items">
+                <a href="#" className="modal__link">
+                  Item
+                </a>
+              </li>
+              <li className="modal__items">
+                <a href="#" className="modal__link">
+                  Item
+                </a>
+              </li>
+              <li className="modal__items">
+                <a href="#" className="modal__link">
+                  Item
+                </a>
+              </li>
+              <li className="modal__items">
+                <a href="#" className="modal__link">
+                  Item
+                </a>
+              </li>
+              <li className="modal__items">
+                <a href="#" className="modal__link">
+                  Item
+                </a>
+              </li>
+              <li className="modal__items">
+                <a href="#" className="modal__link">
+                  Item
+                </a>
+              </li>
+              <li className="modal__items">
+                <a href="#" className="modal__link">
+                  Item
+                </a>
+              </li>
+            </ul>
+
+            <ul className="modal__list">
+              <li className="modal__item">
+                <a href="#" className="modal__links">
+                  <Phone alt="Icon-phone" className="modal__icons" />
+                </a>
+                <span className="modal__text">Menu item 1</span>
+              </li>
+              <li className="modal__item">
+                <a href="#" className="modal__links">
+                  <Network alt="Icon-network" className="modal__icons" />
+                </a>
+                <span className="modal__text">Menu item 2</span>
+              </li>
+              <li className="modal__item">
+                <a href="#" className="modal__links">
+                  <Android alt="Icon android" className="modal__icons" />
+                </a>
+
+                <span className="modal__text">Menu item 3</span>
+              </li>
+              <li className="modal__item">
+                <a href="#" className="modal__links">
+                  <Apple alt="Icon apple" className="modal__icons" />
+                </a>
+                <span className="modal__text">Menu item 4</span>
+              </li>
+            </ul>
           </div>
         </nav>
       </div>

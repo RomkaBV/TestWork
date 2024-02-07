@@ -318,6 +318,10 @@ $breakpoint_sm: 380px;
 }
 
 .modal {
+  margin-bottom: 20px;
+  &.is-open {
+    display: none;
+  }
   &__site {
     margin-top: 75px;
     text-align: center;
