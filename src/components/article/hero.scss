@@ -37,6 +37,9 @@ $breakpoint_sm: 380px;
   height: 234px;
   background-color: var(--var--hero-bg);
   border-radius: 40px;
+  &.is-open {
+    height: auto;
+  }
   @media screen and (min-width: $breakpoint_md) and (max-width: $breakpoint_xl) {
     & {
       width: 720px;
@@ -354,5 +357,52 @@ form {
   }
   &__icon * {
     fill: var(--var--hero--modalBotton);
+  }
+}
+
+.tabModal {
+  margin-top: 20px;
+  &.is-open {
+    display: none;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__button {
+    position: relative;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 12px;
+    background: var(--var--title-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    & span:hover::before,
+    span:active::before {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      height: 5px;
+      background: var(--var--title-color);
+      width: 24px;
+      border-radius: 40px;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+.tabModal .is-open {
+  display: none;
+}
+
+#test {
+  @media screen and (min-width: $breakpoint_md) and (max-width: $breakpoint_xl) {
+    & {
+    }
   }
 }

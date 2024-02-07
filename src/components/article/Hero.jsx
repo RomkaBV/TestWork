@@ -27,7 +27,9 @@ export default function Hero() {
   return (
     <article>
       <div className="conteiner">
-        <div className="conteiner__article">
+        <div
+          className={hero ? 'conteiner__article is-open' : 'conteiner__article'}
+        >
           <div className="hero">
             <section className="download">
               <img src={victoryNikkeIcon} className="download__icon" />
@@ -236,12 +238,43 @@ export default function Hero() {
               onClick={handleButtomModal}
             >
               More info
-              {hero ? (
-                <ModalClose className="modalBottomHero__icon" />
-              ) : (
-                <Burgericon className="modalBottomHero__icon" />
-              )}
+              <Burgericon className="modalBottomHero__icon" />
             </bottom>
+          </div>
+          <div className={hero ? 'tabModal' : 'tabModal is-open'}>
+            <ul className="tabModal__list">
+              <li className="tabModal__item">
+                <button className="tabModal__button" href="">
+                  <span id="test">Lorem Ipsum is simply dummy</span>
+                </button>
+              </li>
+              <li className="tabModal__item">
+                <button className="tabModal__button" href="">
+                  <span>Item</span>
+                </button>
+              </li>
+              <li className="tabModal__item">
+                <button className="tabModal__button" href="">
+                  <span>Item</span>
+                </button>
+              </li>
+              <li className="tabModal__item">
+                <button className="tabModal__button" href="">
+                  <span>Item</span>
+                </button>
+              </li>
+
+              <li className="tabModal__item">
+                <button className="tabModal__button" href="">
+                  <span>Item</span>
+                </button>
+              </li>
+              <li className="tabModal__item">
+                <button className="tabModal__button" href="">
+                  <span>Item</span>
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
