@@ -236,7 +236,6 @@ export default function Hero() {
               onClick={handleButtomModal}
             >
               More info
-              {hero && <Modal></Modal>}
               {hero ? (
                 <ModalClose className="modalBottomHero__icon" />
               ) : (
