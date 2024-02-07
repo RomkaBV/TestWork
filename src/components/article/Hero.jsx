@@ -8,9 +8,16 @@ import android from '../icon/android.svg';
 import apple from '../icon/apple.svg';
 import download from '../icon/download.svg';
 import './hero.scss';
+import { ReactComponent as ModalClose } from '../icon/close.svg';
+import Modal from '../Modal/Modal';
 
 export default function Hero() {
   const [state, setstate] = useState(5.2);
+  const [hero, setHero] = useState(false);
+
+  const handleButtomModal = () => {
+    setHero(!hero);
+  };
   const handlChangeRate = evt => {
     setstate(evt);
   };
@@ -223,9 +230,18 @@ export default function Hero() {
                 <label htmlFor="rate">Note</label>
               </div>
             </div>
-            <bottom className="modalBottomHero">
+            <bottom
+              type="button"
+              className="modalBottomHero"
+              onClick={handleButtomModal}
+            >
               More info
-              <Burgericon className="modalBottomHero__icon" />
+              {hero && <Modal></Modal>}
+              {hero ? (
+                <ModalClose className="modalBottomHero__icon" />
+              ) : (
+                <Burgericon className="modalBottomHero__icon" />
+              )}
             </bottom>
           </div>
         </div>

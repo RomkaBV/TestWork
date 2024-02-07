@@ -7,16 +7,29 @@ import { ReactComponent as Youtube } from '../icon/youtube.svg';
 import { ReactComponent as Email } from '../icon/email.svg';
 import { ReactComponent as Wifi } from '../icon/wifi.svg';
 import { ReactComponent as Burgericon } from '../icon/burger.svg';
+import { ReactComponent as ModalClose } from '../icon/close.svg';
 import theme from '../icon/theme.svg';
 import themedark from '../icon/themedark.svg';
-import phone from '../icon/phone.svg';
-import network from '../icon/network.svg';
-import android from '../icon/android.svg';
-import apple from '../icon/apple.svg';
+import { ReactComponent as Phone } from '../icon/phone.svg';
+import { ReactComponent as Network } from '../icon/network.svg';
+import { ReactComponent as Android } from '../icon/android.svg';
+import { ReactComponent as Apple } from '../icon/apple.svg';
+
+// import phone from '../icon/phone.svg';
+// import network from '../icon/network.svg';
+// import android from '../icon/android.svg';
+// import apple from '../icon/apple.svg';
 import search from '../icon/search.svg';
 import './header.scss';
+import Modal from '../Modal/Modal';
+import { useState } from 'react';
 
 export default function Header({ handleTemeButtonClick, state }) {
+  const [header, setHeader] = useState(false);
+
+  const handleButtomModal = () => {
+    setHeader(!header);
+  };
   const handleButtonSearch = evt => {
     evt.preventDefault();
     evt.target.reset();
@@ -29,34 +42,26 @@ export default function Header({ handleTemeButtonClick, state }) {
             <ul className="header__list">
               <li className="header__item">
                 <a href="#" className="header__link">
-                  <img src={phone} alt="Icon-phone" className="header__icon" />
+                  <Phone alt="Icon-phone" className="header__icon" />
                 </a>
                 <span className="header__text">Menu item 1</span>
               </li>
               <li className="header__item">
                 <a href="#" className="header__link">
-                  <img
-                    src={network}
-                    alt="Icon-network"
-                    className="header__icon"
-                  />
+                  <Network alt="Icon-network" className="header__icon" />
                 </a>
                 <span className="header__text">Menu item 2</span>
               </li>
               <li className="header__item">
                 <a href="#" className="header__link">
-                  <img
-                    src={android}
-                    alt="Icon android"
-                    className="header__icon"
-                  />
+                  <Android alt="Icon android" className="header__icon" />
                 </a>
 
                 <span className="header__text">Menu item 3</span>
               </li>
               <li className="header__item">
                 <a href="#" className="header__link">
-                  <img src={apple} alt="Icon apple" className="header__icon" />
+                  <Apple alt="Icon apple" className="header__icon" />
                 </a>
                 <span className="header__text">Menu item 4</span>
               </li>
@@ -184,8 +189,112 @@ export default function Header({ handleTemeButtonClick, state }) {
               </label>
             </form>
 
-            <bottom className="modalHeaderButton">
-              <Burgericon className="modalHeaderButton__icon" />
+            <bottom
+              type="button"
+              className="modalHeaderButton"
+              onClick={handleButtomModal}
+            >
+              {header && (
+                <Modal>
+                  <div className="modal">
+                    <form className="modal__form" onSubmit={handleButtonSearch}>
+                      <label htmlFor="serch" className="modal__label">
+                        <input
+                          id="search"
+                          type="text"
+                          placeholder="Search for…"
+                          aria-label="Пошук на сайті"
+                          className="modal__input"
+                        />
+
+                        <button className="modal__button" type="submit">
+                          <img
+                            src={search}
+                            alt="Button-Icon-search"
+                            className="modal__icon"
+                          />
+                        </button>
+                      </label>
+                    </form>
+                    <ul className="modal__site">
+                      <li className="modal__items">
+                        <a href="#" className="modal__link">
+                          Item
+                        </a>
+                      </li>
+                      <li className="modal__items">
+                        <a href="#" className="modal__link">
+                          Item
+                        </a>
+                      </li>
+                      <li className="modal__items">
+                        <a href="#" className="modal__link">
+                          Item
+                        </a>
+                      </li>
+                      <li className="modal__items">
+                        <a href="#" className="modal__link">
+                          Item
+                        </a>
+                      </li>
+                      <li className="modal__items">
+                        <a href="#" className="modal__link">
+                          Item
+                        </a>
+                      </li>
+                      <li className="modal__items">
+                        <a href="#" className="modal__link">
+                          Item
+                        </a>
+                      </li>
+                      <li className="modal__items">
+                        <a href="#" className="modal__link">
+                          Item
+                        </a>
+                      </li>
+                    </ul>
+
+                    <ul className="modal__list">
+                      <li className="modal__item">
+                        <a href="#" className="modal__links">
+                          <Phone alt="Icon-phone" className="modal__icons" />
+                        </a>
+                        <span className="modal__text">Menu item 1</span>
+                      </li>
+                      <li className="modal__item">
+                        <a href="#" className="modal__links">
+                          <Network
+                            alt="Icon-network"
+                            className="modal__icons"
+                          />
+                        </a>
+                        <span className="modal__text">Menu item 2</span>
+                      </li>
+                      <li className="modal__item">
+                        <a href="#" className="modal__links">
+                          <Android
+                            alt="Icon android"
+                            className="modal__icons"
+                          />
+                        </a>
+
+                        <span className="modal__text">Menu item 3</span>
+                      </li>
+                      <li className="modal__item">
+                        <a href="#" className="modal__links">
+                          <Apple alt="Icon apple" className="modal__icons" />
+                        </a>
+                        <span className="modal__text">Menu item 4</span>
+                      </li>
+                    </ul>
+                  </div>
+                </Modal>
+              )}
+              {header ? (
+                <ModalClose className="modalHeaderButton__icon" />
+              ) : (
+                <Burgericon className="modalHeaderButton__icon" />
+              )}
             </bottom>
           </div>
         </nav>

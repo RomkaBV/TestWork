@@ -12,12 +12,14 @@ $breakpoint_sm: 380px;
   --var-header-color-menuItem: rgba(42, 134, 229, 1);
   --var-header-bg-search: rgba(238, 238, 238, 1);
   --var-header-color-search: rgba(117, 117, 117, 1);
+  --var-heder-modal--icon: rgba(112, 112, 112, 1);
 }
 [dark] {
   --var-body-bg: rgba(14, 18, 25, 1);
   --var-header-color-menuItem: rgba(13, 208, 186, 1);
   --var-header-bg-search: rgba(24, 58, 93, 1);
   --var-header-color-search: rgba(255, 255, 255, 1);
+  --var-heder-modal--icon: rgba(255, 255, 255, 1);
 }
 
 .conteiner {
@@ -127,7 +129,6 @@ $breakpoint_sm: 380px;
   }
 
   &__link:hover {
-    box-shadow: 1px 1px 1px 1px var(--var--white-color);
     transform: scale(1.1);
   }
 
@@ -291,5 +292,77 @@ $breakpoint_sm: 380px;
   }
   &__icon * {
     fill: rgba(42, 134, 229, 1);
+  }
+}
+
+//Modal
+.modal__form {
+  background-color: var(--var-header-bg-search);
+  border-radius: 38px;
+
+  &__label {
+    display: flex;
+    margin-left: 0px;
+  }
+  &__input {
+    color: var(--var-header-color-search);
+    font-size: 16px;
+  }
+  &__button:active {
+    transform: scale(1.2);
+  }
+  &__icons {
+    width: 19px;
+    height: 20px;
+  }
+}
+
+.modal {
+  &__site {
+    margin-top: 75px;
+    text-align: center;
+  }
+  &__items {
+    margin-bottom: 50px;
+  }
+  &__items:last-child {
+    margin-bottom: 153px;
+  }
+  &__link {
+    color: var(--var-header-color-menuItem);
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: $breakpoint_sm) and (max-width: $breakpoint_md) {
+      & {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  &__item {
+    margin-right: 40px;
+    @media screen and (min-width: $breakpoint_sm) and (max-width: $breakpoint_md) {
+      & {
+        margin-right: 0px;
+        margin-bottom: 23px;
+      }
+    }
+  }
+  &__item:last-child {
+    margin-right: 0px;
+  }
+  &__links {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--var-heder-modal--icon);
+  }
+  &__icons * {
+    fill: var(--var-heder-modal--icon);
   }
 }
