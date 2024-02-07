@@ -15,7 +15,11 @@ export default function Footer({ state }) {
       <div className="conteiner">
         <div className="test">
           <div className="sociall">
-            <img src={state ? LogoImg : LogoImgdark} className="sociall__img" />
+            <img
+              src={state ? LogoImg : LogoImgdark}
+              className="sociall__img"
+              alt="logo icon"
+            />
             <h2 className="title">Lorem Ipsum is simply dummy</h2>
             <p className="text">
               when an unknown printer took a galley of type and scrambled it to

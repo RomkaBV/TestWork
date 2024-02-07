@@ -8,8 +8,6 @@ import android from '../icon/android.svg';
 import apple from '../icon/apple.svg';
 import download from '../icon/download.svg';
 import './hero.scss';
-import { ReactComponent as ModalClose } from '../icon/close.svg';
-import Modal from '../Modal/Modal';
 
 export default function Hero() {
   const [state, setstate] = useState(5.2);
@@ -32,7 +30,11 @@ export default function Hero() {
         >
           <div className="hero">
             <section className="download">
-              <img src={victoryNikkeIcon} className="download__icon" />
+              <img
+                src={victoryNikkeIcon}
+                alt="victory Nikke Icon"
+                className="download__icon"
+              />
               <div className="download__conteiner">
                 <div className="download__title">
                   <h1 className="download__subtitle">

@@ -1,8 +1,8 @@
-import Image from "../icon/imagemain.png";
-import { ReactComponent as User } from "../icon/user.svg";
-import { ReactComponent as Clock } from "../icon/clock.svg";
-import Image300 from "../icon/image22.svg";
-import "./main.scss";
+import Image from '../icon/imagemain.png';
+import { ReactComponent as User } from '../icon/user.svg';
+import { ReactComponent as Clock } from '../icon/clock.svg';
+import Image300 from '../icon/image22.svg';
+import './main.scss';
 export default function Main() {
   return (
     <main>
@@ -43,7 +43,7 @@ export default function Main() {
               </h2>
               <div className="articles__content">
                 <div className="articles__blok blok">
-                  <img className="blok__image" src={Image} />
+                  <img className="blok__image" src={Image} alt="Icon robot" />
                   <h3 className="blok__title">Lorem Ipsum is simply dummy</h3>
                   <div className="blok__item">
                     <div className="blok__meta">
@@ -57,7 +57,7 @@ export default function Main() {
                   </div>
                 </div>
                 <div className="articles__blok blok">
-                  <img className="blok__image" src={Image} />
+                  <img className="blok__image" src={Image} alt="Icon robot" />
                   <h3 className="blok__title">Lorem Ipsum is simply dummy</h3>
                   <div className="blok__item">
                     <div className="blok__meta">
@@ -71,7 +71,7 @@ export default function Main() {
                   </div>
                 </div>
                 <div className="articles__blok blok">
-                  <img className="blok__image" src={Image} />
+                  <img className="blok__image" src={Image} alt="Icon robot" />
                   <h3 className="blok__title">Lorem Ipsum is simply dummy</h3>
                   <div className="blok__item">
                     <div className="blok__meta">
@@ -85,7 +85,7 @@ export default function Main() {
                   </div>
                 </div>
                 <div className="articles__blok blok">
-                  <img className="blok__image" src={Image} />
+                  <img className="blok__image" src={Image} alt="Icon robot" />
                   <h3 className="blok__title">Lorem Ipsum is simply dummy</h3>
                   <div className="blok__item">
                     <div className="blok__meta">
