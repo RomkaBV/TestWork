@@ -1,5 +1,8 @@
 import LogoImg from '../icon/logoImg.svg';
 import LogoImgdark from '../icon/logoImgdark.svg';
+import theme from '../icon/theme.svg';
+import themedark from '../icon/themedark.svg';
+import search from '../icon/search.svg';
 import { ReactComponent as Facebook } from '../icon/facebook.svg';
 import { ReactComponent as Twitter } from '../icon/twitter.svg';
 import { ReactComponent as Instagram } from '../icon/instagram.svg';
@@ -8,20 +11,11 @@ import { ReactComponent as Email } from '../icon/email.svg';
 import { ReactComponent as Wifi } from '../icon/wifi.svg';
 import { ReactComponent as Burgericon } from '../icon/burger.svg';
 import { ReactComponent as ModalClose } from '../icon/close.svg';
-import theme from '../icon/theme.svg';
-import themedark from '../icon/themedark.svg';
 import { ReactComponent as Phone } from '../icon/phone.svg';
 import { ReactComponent as Network } from '../icon/network.svg';
 import { ReactComponent as Android } from '../icon/android.svg';
 import { ReactComponent as Apple } from '../icon/apple.svg';
-
-// import phone from '../icon/phone.svg';
-// import network from '../icon/network.svg';
-// import android from '../icon/android.svg';
-// import apple from '../icon/apple.svg';
-import search from '../icon/search.svg';
 import './header.scss';
-import Modal from '../Modal/Modal';
 import { useState } from 'react';
 
 export default function Header({ handleTemeButtonClick, state }) {

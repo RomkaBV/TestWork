@@ -28,7 +28,7 @@ $breakpoint_sm: 380px;
   padding: 0 15px;
 }
 
-//* Top header nav
+//* Top header nav className="header"
 .header {
   background: linear-gradient(
     90deg,
@@ -240,7 +240,7 @@ $breakpoint_sm: 380px;
     font-size: 18px;
   }
 }
-
+//*Serch
 .search {
   display: flex;
   align-items: center;
@@ -269,6 +269,8 @@ $breakpoint_sm: 380px;
     margin-right: 10px;
   }
 }
+
+//*Header modal
 
 .modalHeaderButton {
   &:active {
