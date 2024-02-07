@@ -301,8 +301,6 @@ $breakpoint_sm: 380px;
   border-radius: 38px;
 
   &__label {
-    display: flex;
-    margin-left: 0px;
   }
   &__input {
     color: var(--var-header-color-search);
@@ -335,7 +333,23 @@ $breakpoint_sm: 380px;
   &__link {
     color: var(--var-header-color-menuItem);
   }
+  &__form {
+    max-width: 730px;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  &__label {
+    display: flex;
+    justify-content: space-around;
+  }
 
+  &__input {
+    width: 100%;
+    padding: 10px 0px;
+    margin-left: auto;
+  }
   &__list {
     display: flex;
     justify-content: center;
